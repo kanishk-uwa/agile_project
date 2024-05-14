@@ -1,45 +1,46 @@
 body {
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    width: 100%;
-    padding: 16px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  .container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .container input[type="text"], .container input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  
-  .container button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .container button:hover {
-    opacity: 0.8;
-  }
-  
-  .container .signup {
-    text-align: center;
-    margin-top: 20px;
-  }
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 400px;
+  padding: 16px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container input[type="text"],
+.container input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.container button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.container button:hover {
+  opacity: 0.8;
+}
+
+.container .signup {
+  text-align: center;
+  margin-top: 20px;
+}

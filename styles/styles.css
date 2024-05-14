@@ -1,14 +1,54 @@
 body {
-  font-family: Arial, sans-serif;
+  background-color: #151f2e;
+  color: #a3a3a3;
+}
+
+*,
+*::before,
+*::after {
+  font-family: 'Orbitron', sans-serif;
+  box-sizing: border-box;
+}
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 9rem;
+}
+
+
+.navbar-default {
+  background: linear-gradient(#a3a3a3, #a3a3a300);
+}
+
+.navbar-header {
+  float: left;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.navbar-brand {
+  font-family: "Orbitron", sans-serif;
+  color: #151f2e;
+  font-size: 2.5rem;
+  font-weight: 900;
+  float: none;
+}
+
+.splash-title {
+  font-family: "Orbitron", sans-serif;
 }
 
 .container {
   width: 400px;
   padding: 16px;
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: #47587377;
+  border: 1px solid #a3a3a3;
   border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px #a3a3a377;
 }
 
 .container h2 {
@@ -19,6 +59,7 @@ body {
 .container input[type="text"],
 .container input[type="password"] {
   width: 100%;
+  border-radius: 4px;
   padding: 12px;
   margin: 8px 0;
   display: inline-block;
@@ -43,4 +84,14 @@ body {
 .container .signup {
   text-align: center;
   margin-top: 20px;
+}
+
+.imageholder {
+  position: absolute;
+  bottom: 5vh;
+  left: 20vw;
+  width: 80%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.25; 
 }

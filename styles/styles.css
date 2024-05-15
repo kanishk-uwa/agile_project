@@ -1,11 +1,18 @@
+:root {
+  --bachground-color: #37505c;
+  --yellow: #F2C14E;
+}
+
 body {
-  background-color: #151f2e;
+  background-color: #37505c;
   color: #a3a3a3;
 }
 
 *,
 *::before,
 *::after {
+  padding: 0;
+  margin: 0;
   font-family: 'Orbitron', sans-serif;
   box-sizing: border-box;
 }
@@ -20,7 +27,7 @@ body {
 
 
 .navbar-default {
-  background: linear-gradient(#a3a3a3, #a3a3a300);
+  background: linear-gradient(var(--yellow), #a3a3a300);
 }
 
 .navbar-header {
@@ -32,7 +39,7 @@ body {
 
 .navbar-brand {
   font-family: "Orbitron", sans-serif;
-  color: #151f2e;
+  color: var(--bachground-color);
   font-size: 2.5rem;
   font-weight: 900;
   float: none;
@@ -40,15 +47,16 @@ body {
 
 .splash-title {
   font-family: "Orbitron", sans-serif;
+  color: var(--yellow);
 }
 
 .container {
   width: 400px;
   padding: 16px;
-  background-color: #47587377;
-  border: 1px solid #a3a3a3;
+  background-color: #54707d77;
+  border: 1px solid #F2C14E77;
   border-radius: 4px;
-  box-shadow: 0 0 10px #a3a3a377;
+  box-shadow: 0 0 10px #F2C14E77;
 }
 
 .container h2 {
@@ -68,8 +76,9 @@ body {
 }
 
 .container button {
-  background-color: #4CAF50;
-  color: white;
+  background-color: var(--yellow);
+  color: var(--bachground-color);
+  font-weight: 500;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -86,12 +95,16 @@ body {
   margin-top: 20px;
 }
 
+.signup > a {
+  color: var(--yellow);
+}
+
 .imageholder {
   position: absolute;
-  bottom: 5vh;
-  left: 20vw;
-  width: 80%;
+  bottom: -5vh;
+  right: -10vw;
+  width: 40%;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.25; 
+  opacity: 0.25;
 }

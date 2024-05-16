@@ -87,7 +87,9 @@ body {
 }
 
 .container button:hover {
-  opacity: 0.8;
+  /* opacity: 0.8; */
+  cursor: pointer;
+  transform: translateY(-2px);
 }
 
 .container .signup {
@@ -95,8 +97,47 @@ body {
   margin-top: 20px;
 }
 
-.signup > a {
+.signup>a {
   color: var(--yellow);
+}
+
+.gameboard_container {
+  width: 482px;
+  padding: 16px;
+  background-color: #54707d77;
+  border: 1px solid #F2C14E77;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #F2C14E77;
+}
+
+#gameboard {
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--yellow);
+  font-size: 120px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+}
+
+.box:hover {
+  background-color: #486b7a;
+}
+
+.box:nth-child(3n) {
+  border-right: none;
+}
+
+.box:nth-child(6)~.box {
+  border-bottom: none;
 }
 
 .imageholder {

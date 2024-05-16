@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- Necessary to make site responsive -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Login</title>
+	<title>Create or Join Game</title>
 	<!-- Importing Orbitron & Teachers fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,21 +29,13 @@
 	</nav>
 	<div class="splash-container">
 		<div class="container">
-			<h2 class="splash-title">Login</h2>
-			<form action="/login" method="post">
-				<label for="username">Username:</label><br>
-				<input type="text" id="username" name="username" required><br>
-				<label for="password">Password:</label><br>
-				<input type="password" id="password" name="password" required><br>
-				<button type="button" class="btn btn-warning">Login</button>
-			</form>
-			<div class="signup">
-				Don't have an account? <a href="/signup">Sign up</a>
-			</div>
+			<button type="button" class="btn btn-warning">New Game</button>
+			<button type="button" class="btn btn-warning">Join Game</button>
 		</div>
 	</div>
 	<!-- Background Watermark -->
 	<img class="imageholder" src="images/tic_tac_toe.svg" alt="">
+
 </body>
 
 </html>

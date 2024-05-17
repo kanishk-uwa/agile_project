@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+    <title> My Profile</title>
+    <link rel="stylesheet" href="styles/profile_style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+<!-- Content container -->
+<h1 class="heading">My Profile</h1>
+<div class="container">
+    
+    <!-- Image and name container. Change to your pictue here. -->
+    <div class="profile" style="text-align: center">
+      <img src="imgs/profile1.png" class="w3-margin" alt="image">
+      <p class="username"><span>@Username</span></p>
+      <p class="pname">Player Name</p>
+    </div>
+
+    <!-- Links section 1. Replace the # inside of the "" with your links. -->
+    <!-- <h4 class="profile">MY SOCIAL NETWORKS</h4>
+    <div class="links-container">
+      <a href="#" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">Facebook</a>
+      <br>
+    </div> -->
+
+    
+    <!-- ----------Stats---------- -->
+
+    <div class="container-stats">
+        <div class="box">
+          <img src="imgs/matches.png" alt="Matches Played">
+          <h6>Matches Played</h6>
+          <h2>234</h2>
+        </div>
+        <div class="box">
+          <img src="imgs/won.png" alt="Matches Won">
+          <h6>Matches Won</h6>
+          <h2>143</h2>
+        </div>
+        <div class="box">
+          <img src="imgs/rank.png" alt="Ranking">
+          <h6>Current Rank</h6>
+          <h2>34</h2><br>
+        </div>
+      </div>
+<!-- ----------Stats---------- -->
+
+</div>
+
+
+<!-- -------------- Leaderboard ---------------->
+
+<div class="leaderboard">
+    <h2>Leaderboard</h2>
+    <ol>
+
+        <li>
+            <div class="info">
+                <img src="https://cdn-icons-png.flaticon.com/256/4825/4825038.png" alt="Player 1">
+                <div class = "details">
+                    <span class="username">Player 1</span>
+                    <br>
+                    <span>Matches Won: 100</span>
+                </div> 
+            </div>
+            <div class="ranking">
+                # 1
+            </div>
+        </li>
+
+      <li>
+            <div class="info">
+                <img src="https://cdn-icons-png.flaticon.com/256/4825/4825112.png" alt="Player 2">
+                <div class = "details">
+                    <span class="username">Player 2</span>
+                    <br>
+                    <span>Matches Won: 90</span>
+                </div> 
+            </div>
+            <div class="ranking">
+                # 2
+            </div>
+      </li>
+
+    </ol>
+  </div>
+
+<!------------------- Using DB ----------------- -->
+
+  <!-- <div class="leaderboard">
+    <h2>Leaderboard</h2>
+    <ol>
+      {% for player in players %}
+      <li>
+        <div class="info">
+          <img src="{{ player[3] }}" alt="{{ player[0] }}">
+          <div class="details">
+            <span class="username">{{ player[0] }}</span>
+            <br>
+            <span>Matches Won: {{ player[2] }}</span>
+          </div>
+        </div>
+        <div class="ranking">
+          # {{ player[1] }}
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div> -->
+
+  <!-- -------------- Leaderboard ---------------->
+
+  <script>
+    feather.replace()
+  </script>
+</body>
+</html>

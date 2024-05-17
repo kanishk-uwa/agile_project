@@ -1,6 +1,7 @@
 :root {
   --bachground-color: #37505c;
   --yellow: #F2C14E;
+  --winning-color: #2d3d45;
 }
 
 body {
@@ -148,4 +149,9 @@ body {
   z-index: -1;
   pointer-events: none;
   opacity: 0.25;
+}
+
+#playerText {
+  margin-top: 10px;
+  color: var(--yellow)
 }

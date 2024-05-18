@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<style>
+    .login {
+        background-color: bisque;
+
+    }
+    .login1 {
+         text-align: center;
+        padding: 30px;
+        margin: 100px 0;
+
+
+    }
+</style>
+<body class="login" >
+    <div class="login1" >
+        <h2> login</h2>
+        <form action="/login" method="post">
+            <div>
+                        <input placeholder="enter user name" name ="username"/>
+
+            </div>
+            <div>
+                            <input placeholder="enter user pwd" name = "password"/>
+
+            </div>
+        <button type="submit"> enter</button>
+
+        </form>
+        <form action="/turn_to_register" method="post">
+        <button type="submit"> register</button>
+
+        </form>
+
+    </div>
+</body>
+</html>

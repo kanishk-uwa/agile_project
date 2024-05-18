@@ -177,3 +177,42 @@ text-align: left;
     color: #435f6c;
     font-size: 25px;
   }
+
+  .btn-logout {
+    background-color: #D9534F; /* Bootstrap standard color for 'danger' */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-logout:hover {
+    background-color: #C9302C; /* A darker shade for hover */
+}
+
+.btn-play {
+  background-color: #5CB85C; /* A green color indicating a go-ahead or positive action */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-play:hover {
+  background-color: #4CAE4C; /* A darker shade of green for hover */
+}
+
+.profile .pname {
+    margin-bottom: 30px; /* Adjust as needed for desired spacing */
+}
+

@@ -1,0 +1,10 @@
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "userinfo" (
+	"userid"	INTEGER NOT NULL,
+	"username"	VARCHAR NOT NULL UNIQUE,
+	"pwd"	VARCHAR NOT NULL,
+	PRIMARY KEY("userid")
+);
+INSERT INTO "userinfo" VALUES (1,'aa','123');
+INSERT INTO "userinfo" VALUES (2,'bb','ccc');
+COMMIT;

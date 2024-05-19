@@ -1,5 +1,7 @@
 # Tic Tac Toe (Group project for Agile Web Development CITS5505)
 Tic Tac Toe is a classic two-player game that is simple yet challenging, often played on paper but also available in digital forms. In our project we allow user to creat their own account inorder to track their stats. Meanwhile it is quite easy for different users to create a new Tic Tac Toe Page against each other.
+##Login
+![login 1](agile_project /static/images/login.png)
 ## Installation and Setup
 
 This guide assumes that you have python installed.

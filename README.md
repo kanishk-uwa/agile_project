@@ -25,11 +25,21 @@ From within the virtual environment, install project requirements from requireme
 (venv) $ sudo apt install pip
 (venv) $ pip install -r requirements.txt
 ```
+### Step 2 - Launch Tic Tac Toe
 
+Launch the application to http://localhost:5000 
 
-1. The purpose of this application was to create a Tic Tac Toe Page where users could play against each other and track their stats!
+```bash
+(venv) $ flask run
+```
 
-2. The application can be launched using python run.py and a secret key can be specified using terminal set commands.
+# Key References
+
+A number of Online Resources were leveraged to make this Project successful. They include:
+
+1. The Flask Mega-Tutorial by Miguel Grinberg: https://blog.miguelgrinberg.com/
+2. The SQLAlchemy Documentation: https://www.sqlalchemy.org/
+3. Flask: https://flask.palletsprojects.com/en/2.3.x/
 
 
 

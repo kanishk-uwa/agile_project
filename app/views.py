@@ -1,17 +1,19 @@
-# app/views.py
 from flask import Blueprint, render_template, jsonify, redirect, url_for, flash, request
 from flask_login import login_user, logout_user, login_required, current_user
 from . import db
 from .models import User, Move, Game
 from .forms import LoginForm, RegistrationForm
 
+# Create a blueprint for the main routes
 main_blueprint = Blueprint('main', __name__)
 
+# Route for the index page
 @main_blueprint.route('/')
 def index():
     form = LoginForm()
     return render_template('index.html', form=form)
 
+# Route for user registration
 @main_blueprint.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
@@ -32,6 +34,7 @@ def register():
                 flash(f"{error}", 'danger')
     return render_template('register.html', form=form)
 
+# Route for user login
 @main_blueprint.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
@@ -48,6 +51,7 @@ def login():
         flash('Invalid input. Please ensure all fields are correctly filled.', 'danger')
     return render_template('index.html', form=form)
 
+# Route for user logout
 @main_blueprint.route('/logout')
 @login_required
 def logout():
@@ -55,17 +59,20 @@ def logout():
     flash('You have been logged out.', 'info')
     return redirect(url_for('main.index'))
 
+# Route for the user profile page
 @main_blueprint.route('/profile')
 @login_required
 def profile():
     players = User.query.order_by(User.rating.desc()).limit(10).all()
     return render_template('profile.html', user=current_user, players=players)
 
+# Route for the new game page
 @main_blueprint.route('/new_game')
 @login_required
 def new_game():
     return render_template('new_game.html')
 
+# Route to create a new game
 @main_blueprint.route('/create_game')
 @login_required
 def create_game():
@@ -75,6 +82,7 @@ def create_game():
     flash('New game created! You can start playing.', 'success')
     return redirect(url_for('main.game_screen', game_id=game.id))
 
+# Route to join an existing game
 @main_blueprint.route('/join_game')
 @login_required
 def join_game():
@@ -86,12 +94,14 @@ def join_game():
         flash('No available games to join. Please create a new game.', 'danger')
         return redirect(url_for('main.new_game'))
 
+# Route for the game screen
 @main_blueprint.route('/game_screen/<int:game_id>')
 @login_required
 def game_screen(game_id):
     game = Game.query.get_or_404(game_id)
     return render_template('game_screen.html', game=game)
 
+# Route to submit a move
 @main_blueprint.route('/submit_move', methods=['POST'])
 @login_required
 def submit_move():
@@ -108,6 +118,7 @@ def submit_move():
     
     return jsonify({"message": "Move submitted successfully"})
 
+# Route to update game results
 @main_blueprint.route('/update_results', methods=['POST'])
 def update_results():
     try:

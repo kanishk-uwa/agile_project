@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/profile_style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  {% for message, category in get_flashed_messages(with_categories=true) %}
+  <div class="alert alert-{{ category }}">
+      {{ message }}
+  </div>
+  {% endfor %}
+  <!-- Content container -->
+  <h1 class="heading">My Profile</h1>
+  <div class="container">
+      <!-- Image and name container. Change to your picture here. -->
+      <div class="profile" style="text-align: center">
+          <img src="{{ url_for('static', filename='images/profile1.png') }}" class="w3-margin" alt="image">
+          <p class="username"><span>{{ user.username }}</span></p>
+          <div>
+              <a href="{{ url_for('main.new_game') }}" class="btn-play">Play</a>
+              <a href="{{ url_for('main.logout') }}" class="btn-logout">Log Out</a>
+          </div>
+      </div>
+
+      <div class="container-stats">
+          <div class="box">
+              <img src="{{ url_for('static', filename='images/matches.png') }}" alt="Total Games">
+              <h6>Total Games</h6>
+              <h2>{{ user.total_games }}</h2>
+          </div>
+          <div class="box">
+              <img src="{{ url_for('static', filename='images/moves.png') }}" alt="Total Moves">
+              <h6>Total Moves</h6>
+              <h2>{{ user.total_moves }}</h2>
+          </div>
+          <div class="box">
+              <img src="{{ url_for('static', filename='images/won.png') }}" alt="Matches Won">
+              <h6>Wins</h6>
+              <h2>{{ user.wins }}</h2>
+          </div>
+          <div class="box">
+              <img src="{{ url_for('static', filename='images/lost.png') }}" alt="Matches Lost">
+              <h6>Losses</h6>
+              <h2>{{ user.losses }}</h2>
+          </div>
+          <div class="box">
+              <img src="{{ url_for('static', filename='images/draw.png') }}" alt="Matches Drawn">
+              <h6>Draws</h6>
+              <h2>{{ user.draws }}</h2>
+          </div>
+          <div class="box">
+              <img src="{{ url_for('static', filename='images/rank.png') }}" alt="Rating">
+              <h6>Rating</h6>
+              <h2>{{ user.rating }}</h2>
+          </div>
+      </div>
+  </div>
+
+  <!-- Leaderboard Section -->
+  <div class="leaderboard">
+      <h2>Leaderboard</h2>
+      <ol>
+          {% for player in players %}
+          <li>
+              <div class="info">
+                  <img src="https://cdn-icons-png.flaticon.com/256/4825/4825038.png" alt="{{ player.username }}">
+                  <div class="details">
+                      <span class="username">{{ player.username }}</span><br>
+                      <span>Player Rating: {{ player.rating }}</span>
+                  </div> 
+              </div>
+              <div class="ranking">
+                  # {{ loop.index }}
+              </div>
+          </li>
+          {% endfor %}
+      </ol>
+  </div>
+
+</body>
+</html>

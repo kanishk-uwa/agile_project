@@ -4,7 +4,6 @@ from flask_login import login_user, logout_user, login_required, current_user
 from . import db
 from .models import User, Move, Game
 from .forms import LoginForm, RegistrationForm
-from .calcrank import update_ratings
 
 main_blueprint = Blueprint('main', __name__)
 
@@ -120,10 +119,12 @@ def update_results():
 
         if result == 'win':
             user.wins += 1
+            user.rating += 25
         elif result == 'draw':
             user.draws += 1
         else:
             user.losses += 1
+            user.rating -= 25
         
         user.total_games += 1
 
@@ -131,15 +132,14 @@ def update_results():
 
         if result == 'win':
             opponent.losses += 1
+            opponent.rating -= 25
         elif result == 'draw':
             opponent.draws += 1
         else:
             opponent.wins += 1
+            opponent.rating -= 25
         
         opponent.total_games += 1
-
-        if result == 'win':
-            update_ratings(user, opponent)
 
         db.session.commit()
 
